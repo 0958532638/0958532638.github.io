@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortcut icon" href="img/logo.png">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<script src="../myfamily/js/jquery-3.2.1.js"></script>
+<script src="../myfamily/js/bootstrap-3.3.7.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="source/jquery.fancbox.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<title>來去瘋彰化</title>
+	<style>
+		body{
+			width: 100%;
+			height: 2000px;
+			background-color: rgba(105,103,228,1.00);
+			position: relative;
+		}	
+	
+	.container-flulid #myScrollspy1 {
+		width: 100%;
+		height:auto;
+		position: absolute;
+}
+		
+    .container-flulid #myScrollspy1 #myNav {
+		width: 120px;
+		height: 20px;
+		margin-left: 45%;
+}
+    #myScrollspy1 #myNav li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-image: url(img/%E5%85%AC%E7%9A%AE.jpg);
+	background-repeat: no-repeat;
+}
+		#myNav li>a:hover{
+	     background-color:transparent;
+	}
+		#myNav li:hover{
+			background-color: rgba(239,182,39,1.00) !important;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+		}
+	/*Nav2*/
+		.container-flulid #myScrollspy2{
+			position: fixed;
+			width: 20px;
+			height:150px;
+			right: 50px;
+			top:45%;
+			
+		}	
+	.container-flulid #myScrollspy2 #myNav2 {
+		width: 20px;
+		height: 100px;
+		
+}
+		
+  
+    #myScrollspy2 #myNav2 li {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	display: block;
+	background-color:#E625F1;
+}
+	#myScrollspy2 #myNav2 li>a:hover{
+		 background-color:transparent;	
+		}
+	#myNav2 li a:hover{
+			background-color:#F13A3D !important;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+		}
+		
+		
+		
+    </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy1">
+	<div class="container-flulid" >
+    <div id="myScrollspy1">
+            <ul class="nav" style="padding-right: 0px" id="myNav">
+                <li><a href="#section-1" title="彰化導覽"></a></li>
+                <li><a href="#section-2" title="在地產業"></a></li>
+                <li><a href="#section-3" title="在地小故事"></a></li>
+                <li><a href="#section-4" title="廠商好康報！報！報！"></a></li>
+                <li><a href="#section-5" title="聯絡我們"></a></li>
+	       </ul>
+      </div>
+      <div id="myScrollspy2">
+        <ul class="nav2" style="padding-right: 0px" id="myNav2">
+                <li><a href="#section-1" title="彰化導覽"></a></li>
+                <li><a href="#section-2" title="在地產業"></a></li>
+                <li><a href="#section-3" title="在地小故事"></a></li>
+                <li><a href="#section-4" title="廠商好康報！報！報！"></a></li>
+                <li><a href="#section-5" title="聯絡我們"></a></li>
+	       </ul>
+      </div>
+     
+    <div id="logo">
+		<img src="img/logo.png" width="80" height="80" alt="logo"/></div>
+		
+
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+	//console.log(document.getElementById("myScrollspy2"));
+    if (document.body.scrollTop > 768 || document.documentElement.scrollTop > 768) {
+        document.getElementById("myScrollspy2").style.display = "block";
+    } else {
+        document.getElementById("myScrollspy2").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

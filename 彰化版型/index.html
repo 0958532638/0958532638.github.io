@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortcut icon" href="img/logo.png">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<script src="../myfamily/js/jquery-3.2.1.js"></script>
+<script src="../myfamily/js/bootstrap-3.3.7.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="source/jquery.fancbox.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<title>來去瘋彰化</title>
+<style>
+	body{
+		width: 100%;
+		height: auto;
+		margin: 0px;
+		background: #ffcccc;
+	}
+	#myCarousel .carousel-inner .item.active{
+		width: 100%;
+		height: auto; 
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-bottom: 10px;
+	}
+	#myScrollspy1 .nav{
+	width: 200px;
+	height: 50px;
+	position: fixed;
+    right: 40%;
+	top: 5%;
+	z-index: 100;
+	}
+	
+	#myScrollspy1 #myNav li {
+		display: inline-block;
+		width:  20px;
+		height: 20px;
+		background:rgba(253,92,237,1.00);
+		border-radius: 50%;
+	}
+
+	#myNav li>a:hover{
+	background-color:transparent;
+	}
+	
+	#myNav li:hover{
+		background:rgba(243,195,29,1.00) !important;
+	}
+	
+	#logo{
+		margin: :0px;
+	}
+   #myCarousel .carousel-inner .carousel-control.left {
+	font-size: 5em;
+	top: 30%;
+	text-align: center;
+	   background-image:none;
+}
+   #myCarousel .carousel-inner .carousel-control.right {
+   font-size: 5em;
+	   top: 30%;
+	    background-image:none;
+	}	
+	/*Nav*/
+	.h4{
+		color: #ffffff;
+	}
+	#box1{
+		background:rgba(240,81,239,0.40);
+		border: 4px solid rgba(125,96,244,0.48);
+	}
+    #box2{
+		background:rgba(97,55,240,1.00);
+		border: 4px solid rgba(125,96,244,0.48);
+	}
+	#box3{
+		background:rgba(236,215,22,1.00);
+		border: 4px solid rgba(125,96,244,0.48);
+	}
+	#box4{
+		background:#42f44b;
+		border: 4px solid rgba(125,96,244,0.48);
+	}
+	/*第三頁*/
+	#section-3{
+	width: 100%;
+	height: 630px;
+	overflow-x: hidden;
+	}
+	#content {
+	width: 100%;
+	height: 300px;
+}
+	#box2-1{
+		width: 88%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/*小圖輪播*/
+   #carousel{
+	margin-top: 20px;
+	padding: 20px;
+	margin-left: 0px;
+	width: 100%;
+	color: rgba(255,252,252,1.00);
+	text-align: center;
+	}
+	#carousel img{
+		width: 90%;
+		height: auto;
+		vertical-align: top;
+		margin: 20px;
+	}
+
+	/*第四頁*/
+	#section-4{
+		width: 100%;
+		height: auto;
+		padding: 0 20px 0 20px;
+		background:rgba(247,184,199,1.00);
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-2{
+		width: 100%;
+		height: auto;
+		margin-left: auto;
+	    margin-right: auto;
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-1 {
+	width: 100%;
+		height: auto;
+		margin-left: auto;
+	    margin-right: auto;
+}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-3 {
+	    width: 100%;
+		height: autopx;
+		margin-left: auto;
+	    margin-right: auto;
+}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-4 {
+	    width: 100%;
+		height: auto;
+		margin-left: auto;
+	    margin-right: auto;
+}
+#section-4 .row .col-xs-12.col-sm-6.col-lg-3 img:nth-child(1) {
+	    padding-bottom: 10px;
+	
+}
+.col-xs-12.col-sm-6.col-lg-3 .icon-4 .btn-2 {
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	bottom: 20px;
+	background:rgba(251,3,7,1.00);
+	right: 20px;
+}
+	/**第五頁**/
+	#footer{
+		width: 100%;
+		height: 140px;
+		background:rgba(0,0,0,1.00);
+		margin: 0px;
+		padding: 10px;
+	}
+
+#footer .col-xs-1.col-sm-2.col-lg-10 .logo {
+    display: inline-block;
+	float: left;
+	
+	} 
+
+.content ul li{
+		display: inline-block;
+		color: #ffffff;
+		font-size: 3em;
+	}	
+
+
+	p{
+		margin-right: 10px;
+		color: #ffffff;
+	}
+#footer .col-xs-1.col-sm-2.col-lg-10 .logo {
+	display: inline-block;
+	float: left;
+}
+#text content ul {
+	float: left;
+	display: inline-block;
+	margin-left: 50px;
+	color: #ffffff;
+	
+}
+ul li {
+	display: inline-block;
+	font-size: 2em;
+	color: #ffffff;
+	text-align: center;
+	padding:10px;
+	
+}
+	
+
+	@media screen and (max-width:1200px) and (min-width:1140px){
+		/*第三頁*/
+	 #carousel{
+	margin-top: 20px;
+	margin-left: -110px;
+	
+	}
+	#carousel img{
+		width: 70%;
+	}
+		/*第四頁*/
+		#section-4{
+		text-align: center;	
+		}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-2{
+		width: 80%;
+		}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-1 {
+	width: 80%;
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-3 {
+	    width: 80%;
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-4 {
+	    width: 80%;
+		}}
+	@media screen and (max-width:1139px) and (min-width:960px){
+	/*第三頁*/
+	 #carousel{
+	margin-top: 20px;
+	margin-left: -110px;
+	
+	}
+	#carousel img{
+		width: 70%;
+	}
+	/*第四頁*/
+		#section-4{
+		text-align: center;	
+		}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-2{
+		width: 80%;
+		}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-1 {
+	width: 80%;
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-3 {
+	    width: 80%;
+	}
+.row .col-xs-12.col-sm-6.col-lg-3 .icon-4 {
+	    width: 80%;
+		}
+/*第五頁*/	
+
+	}
+</style>
+<script src="js/jquery.min.js"></script>		
+<script src="js/jquery.slidizle.js"></script>
+<script>
+$(function() {
+	$('.dowebok').slidizle({
+		loop: true
+	});
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.jcarousellite.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#carousel").jCarouselLite({
+				auto:1200,
+				scroll:2,
+				visible:2,
+				speed:600,
+			});
+		});
+	</script>
+</head>
+
+<body>
+<body data-spy="scroll" data-target="#myScrollspy1">
+	<div class="container-flulid" >
+    <div id="myScrollspy1">
+            <ul class="nav" style="padding-right: 0px" id="myNav">
+                <li><a href="#section-1" title="彰化導覽"></a></li>
+                <li><a href="#section-2" title="在地產業"></a></li>
+                <li><a href="#section-3" title="在地小故事"></a></li>
+                <li><a href="#section-4" title="廠商好康報！報！報！"></a></li>
+                <li><a href="#section-5" title="聯絡我們"></a></li>
+	       </ul>
+      </div>
+    <div id="logo">
+		<img src="img/logo.png" width="80" height="80" alt="logo"/></div>
+		
+		<div class="row">
+			<div class="col-xs-12 col-lg-12">
+				<div id="section-1">
+				<div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+		<li data-target="#myCarousel" data-slide-to="4"></li>
+		<li data-target="#myCarousel" data-slide-to="5"></li>
+		
+	</ol>
+	 
+	<!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+		<div class="item active">
+<img src="img/在地彰化首頁.png" class="img-responsive" alt="Cinque Terre" width="100%" height="890" alt=""/></div>
+    <div class="item">
+	  <img src="img/在地美1.png" class="img-responsive" alt="Cinque Terre" width="100%" height="890" alt=""/></div>
+	<div class="item">
+		<img src="img/food5.png" class="img-responsive" alt="Cinque Terre" width="100%" height="890" alt=""/></div>	
+	<div class="item">
+		<img src="img/food4.png"  class="img-responsive" alt="Cinque Terre"width="100%" height="890" alt=""/></div>
+		<div class="item">
+		<img src="img/food3.png" class="img-responsive" alt="Cinque Terre" width="100%" height="890" alt=""/></div>	
+		<div class="item">
+        <img src="img/food2.png" class="img-responsive" alt="Cinque Terre" width="100%" height="890" alt=""/></div>
+    <a class="carousel-control left" style="text-align: center" href="#myCarousel" 
+	   data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" 
+	   data-slide="next">&rsaquo;</a>
+</div>
+	</div></div></div></div>
+	<!--第二頁-->
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div id="section-2">
+	
+      <img src="img/story.png" class="img-responsive" alt="Cinque Terre" width="100%" width="2000" height="768" alt=""/></div>
+    </div>
+    	
+		
+	  </div>		
+	<!--第三頁-->
+	
+	<div id="section-3">	
+	<div class="row">
+	<div class="col-xs-12 col-sm-12 col-lg-12">
+	<div id="box2-1">
+	<div id="content">
+    <div class="col-xs-12 col-sm-12 col-lg-12">
+     <div id="carousel">
+		<ul>
+			<li>
+				<img src="img/8.png">
+				<br>
+				<h4 class="icno-title">伸港風車 </h4>
+				<p class="card-text">國家的風力發電中心</p>
+				<a href="#" class="btn btn-primary">Go!</a>
+		  	</li>
+		<li>
+        <img src="img/7.png">
+         <br>
+         <h4 class="icno-title">彰化最好吃的土鳳梨酥 </h4>
+         <p class="card-text">彰化芬園鄉盛產土鳳梨</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+           </li>
+		<li><img src="img/6.png">
+         <br>
+         <h4 class="icno-title">大佛風景區 </h4>
+         <p class="card-text">彰化大佛為彰化代表最早時期的遊覽勝地</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+
+         </li>
+		
+		<li><img src="img/4.png">
+         <br>
+         <h4 class="icno-title">福田咖啡香</h4>
+         <p class="card-text">彰化芬園鄉盛產咖啡豆</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+
+        </li>
+		<li><img src="img/3.png">
+         <br>
+         <h4 class="icno-title">田尾公路花園</h4>
+         <p class="card-text">vvvvvvvvvvvvvvvvvvvvvvvv</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+
+        </li>
+		<li><img src="img/2.png">
+         <br>
+         <h4 class="icno-title">天空步道</h4>
+         <p class="card-text">天空步道為彰化最有名的天空之橋</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+
+         </li>
+		<li><img src="img/1.png">
+         <br>
+         <h4 class="icno-title">大佛夜景</h4>
+         <p class="card-text">你不可不知的大佛夜景</p>
+          <a href="#" class="btn btn-primary">Go!</a>
+
+         </li>
+        </ul></div>
+        
+		</div>
+        </div></div>
+      </div></div></div>
+        <!--第四頁-->
+       <div id="section-4">	
+	<div class="row">
+	<div class="col-xs-12 col-sm-6 col-lg-3">
+	<div class="icon-1">
+    <img class="icon-top" src="img/1a.png" >
+    <img class="icon-bottom" src="img/2a.png">
+    </div>
+	  </div>
+    <div class="col-xs-12 col-sm-6 col-lg-3">
+    <div class="icon-2">
+      <img class="icon-top" src="img/3a.png">
+    <img class="icon-bottom" src="img/4a.png">
+		</div>	</div>
+   <div class="col-xs-12 col-sm-6 col-lg-3">
+    <div class="icon-3">
+      <img class="icon-top" src="img/5a.png">
+    <img class="icon-bottom" src="img/6a.png">
+	   </div></div>
+	<div class="col-xs-12 col-sm-6 col-lg-3">	
+    <div class="icon-4">
+    <img class="icon-only" src="img/優惠眷2.png">
+   <a href="#" class="btn-2">Go!</a>
+    </div>	
+	</div>
+	     </div></div>
+	<!--第五頁-->
+	  <div id="section-5">
+	   <div class="row">
+		<div class="col-xs-12 col-sm-12 col-lg-12">
+		   <div id="footer">
+       	  <div class="col-xs-1 col-sm-2 col-lg-10">
+	       	  <div class="logo"><img src="img/logo.png" width="80" height="80" alt=""/>
+	       	  </div> 
+	       	  
+	       	  
+	       	  
+			<div id="text content">
+	          <ul>
+	          	<li><a href="#">彰化首頁</a></li>
+	          	<li><a href="#">在地小故事</a></li>
+	          	<li><a href="#">在地小吃報給你知</a></li>
+	          	<li><a href="#">廠商好康報！報！報！</a></li>
+	          </ul>   
+		   <p>Bonnie 網站製作小組  Copy right</p>
+		   </div>
+		     </div>
+	      </div>
+      </div>	
+</div>	
+   </div>
+</body>
+</html>	
